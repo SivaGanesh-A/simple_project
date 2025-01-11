@@ -25,3 +25,13 @@ def submit_data():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+@app.route('/test-db')
+def test_db():
+    from pymongo import MongoClient
+    try:
+        client = MongoClient("<your-connection-string>")
+        client.server_info()  # This will raise an exception if the connection fails
+        return "Database connected successfully!"
+    except Exception as e:
+        return f"Error: {str(e)}", 500
