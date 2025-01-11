@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # MongoDB Connection
-MONGO_URI = os.getenv("mongodb+srv://unexpectedgaming1:<db_password>@cluster3.yiwed.mongodb.net/?retryWrites=true&w=majority&appName=cluster3")
+MONGO_URI = os.getenv("mongodb+srv://unexpectedgaming1:e8Zj1Bdn31TcJBkw@cluster3.yiwed.mongodb.net/?retryWrites=true&w=majority&appName=cluster3")
 client = MongoClient(MONGO_URI)
 db = client['simpledb']  # Database Name
 collection = db['simplecollection']  # Collection Name
